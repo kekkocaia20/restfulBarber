@@ -1,0 +1,285 @@
+.navbar {
+    background-color: #272624; /* Cambia il colore della navbar */
+}
+
+.navbar .container-md {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aggiunge spazio tra il logo e il titolo */
+}
+
+.navbar-logo {
+  height: 80px;
+  width: auto;
+  border: none !important;
+  outline: none !important;
+  display: block;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  image-rendering: smooth;
+}
+
+.navbar .navbar-brand {
+  margin-left: 10px;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+  color: #f0f0f0;
+}
+
+@media (max-width: 767px) {
+  .navbar .container-md {
+    flex-direction: row; /* Rende il layout in riga anche su mobile */
+    justify-content: space-between; /* Spazio tra il logo e il titolo */
+  }
+
+  .navbar-logo {
+    height: 60px; /* Riduci leggermente l'altezza del logo su mobile */
+  }
+
+  .navbar .navbar-brand {
+    font-size: 20px; /* Riduci la dimensione del testo su mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container-md {
+    flex-direction: row; /* Assicurati che anche sugli schermi più piccoli siano su una riga */
+    align-items: center; /* Centra gli elementi verticalmente */
+  }
+
+  .navbar-logo {
+    height: 50px; /* Riduci ulteriormente l'altezza del logo per schermi molto piccoli */
+  }
+
+  .navbar .navbar-brand {
+    font-size: 18px; /* Ancora più piccolo su dispositivi molto piccoli */
+  }
+}
+
+.card:hover {
+    transform: scale(1.05); /* Ingrandisce la card al passaggio del mouse */
+}
+
+.card-img-top {
+    height: 180px; /* Aumenta l'altezza dell'immagine */
+    object-fit: cover; /* Mantiene il focus sull'immagine */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    font-size: 20px; /* Leggermente più grande */
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.btn-primary {
+    background-color: #333;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color:  #333;
+}
+
+
+html, body {
+    height: 100%; /* Imposta altezza al 100% per html e body */
+    margin: 0; /* Rimuove i margini di default */
+    padding: 0; /* Rimuove il padding di default */
+    overflow-x: hidden; /* Impedisce lo scroll orizzontale */
+}
+
+body {
+    background-image: url('/img/background.jpg'); /* Imposta l'immagine di sfondo */
+    background-size: cover; /* L'immagine copre l'intera finestra */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+    min-height: 100vh; /* Imposta l'altezza minima del body */
+    display: flex; /* Usa il flexbox */
+    flex-direction: column; /* Posiziona gli elementi in verticale */
+    flex-grow: 1; /* Il corpo cresce per occupare tutto lo spazio disponibile */
+}
+
+.footer {
+  background-color: #272624; /* Colore di sfondo scuro per il footer */
+  color: #fff; /* Colore del testo */
+  padding: 20px 0;
+  text-align: center; /* Centra il testo del footer */
+  margin-top: auto; /* Questo fa sì che il footer venga spinto verso il basso */
+  width: 100%;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.footer .social-icons a:hover {
+  color: #f0f0f0; /* Cambia il colore al passaggio del mouse */
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permette alle card di andare su più righe */
+    justify-content: center; /* Centra le card orizzontalmente */
+    align-items: center; /* Centra le card verticalmente */
+    min-height: 100vh; /* Altezza minima per evitare che si accavallino */
+    padding: 20px; /* Aggiunge spazio intorno */
+    gap: 20px; /* Distanza uniforme tra le card */
+}
+
+.card {
+    width: 90%; /* Adatta la larghezza per i dispositivi mobili */
+    max-width: 350px; /* Limita la larghezza massima */
+    min-height: 380px; /* Forza tutte le card alla stessa altezza */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuisce lo spazio equamente */
+    margin: 10px; /* Aggiunge margine tra le card */
+    text-align: center; /* Centra il testo */
+    width: 300px; /* Aumenta leggermente la larghezza */
+    margin: 20px auto; /* Centra la card orizzontalmente */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+    background: #fff; /* Sfondo bianco */
+    transition: transform 0.3s ease-in-out; /* Effetto di ingrandimento */
+}
+
+.card-body {
+    flex-grow: 1; /* Fa in modo che il contenuto della card si adatti */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Allinea meglio il contenuto */
+}
+
+
+.flatpickr-day.today {
+        background: none !important;
+        border: none !important;
+}
+
+/* Stile del Form */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+/* Etichette */
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Campi di input e select */
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Effetto al focus dei campi */
+input[type="text"]:focus, select:focus {
+    border-color: #333;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Bottone */
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effetto hover sul bottone */
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Rimuove il bordo dagli input */
+input[type="text"], select {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .row {
+        flex-direction: row; /* Mantiene le card in una riga */
+        justify-content: center; /* Centra le card orizzontalmente */
+    }
+
+    .card {
+        width: 45%; /* Adatta la larghezza delle card a circa il 45% per due colonne */
+        max-width: 400px; /* Limita la larghezza massima */
+        min-height: 380px; /* Uniforma l'altezza delle card */
+        margin: 20px; /* Distanza tra le card */
+    }
+}
+
+
+@media (max-width: 767px) {
+   .row {
+        flex-direction: column; /* Mette le card in colonna */
+        align-items: center; /* Le centra perfettamente */
+    }
+
+    .card {
+        width: 100%; /* Occupa tutta la larghezza */
+        max-width: 300px; /* Mantiene una dimensione adeguata */
+        min-height: 380px; /* Uniforma l'altezza su mobile */
+    }
+}
+
+
+
+
+
+

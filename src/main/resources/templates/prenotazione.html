@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Prenotazione</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-md">
+    <img src="/img/logo.png" alt="Logo" class="navbar-logo">
+    <a class="navbar-brand" href="index">GERRYTHEBARBER</a>
+  </div>
+</nav>
+
+<div class="container mt-5">
+    <form id="prenotazioneForm" th:action="@{/prenotazione}" method="post" class="bg-white p-4 rounded shadow-sm">
+        
+        <h2 class="text-center mb-4">Prenotazione del Servizio</h2>
+        
+       <!-- Nome -->
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" id="nome" name="nome" class="form-control">
+            <div id="nomeError" class="text-danger d-none">Il nome è obbligatorio.</div>
+        </div>
+
+        <!-- Cognome -->
+        <div class="mb-3">
+            <label for="cognome" class="form-label">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" class="form-control">
+            <div id="cognomeError" class="text-danger d-none">Il cognome è obbligatorio.</div>
+        </div>
+
+        <!-- Numero di Telefono -->
+        <div class="mb-3">
+            <label for="numeroTelefono" class="form-label">Numero di Telefono:</label>
+            <input type="text" id="numeroTelefono" name="numeroTelefono" class="form-control">
+            <div id="numeroTelefonoError" class="text-danger d-none">Il numero di telefono è obbligatorio.</div>
+        </div>
+
+        <!-- Data Prenotazione -->
+        <div class="mb-3">
+            <label for="dataPrenotazione" class="form-label">Seleziona la data di prenotazione:</label>
+            <input type="text" id="dataPrenotazione" name="dataPrenotazione" class="form-control flatpickr">
+            <div id="dataPrenotazioneError" class="text-danger d-none">La data di prenotazione è obbligatoria.</div>
+        </div>
+
+        <!-- Orario Prenotazione -->
+        <div class="mb-3">
+            <label for="orarioPrenotazione" class="form-label">Seleziona l'orario di prenotazione:</label>
+            <select name="orarioPrenotazione" id="orarioPrenotazione" class="form-select">
+                <option value="" selected disabled>Seleziona l'orario</option>
+                <option th:each="orario : ${orariDisponibili}" th:value="${orario}" th:text="${orario}"></option>
+            </select>
+            <div id="orarioPrenotazioneError" class="text-danger d-none">L'orario di prenotazione è obbligatorio.</div>
+        </div>
+
+        <!-- Pulsante di Invio -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-dark btn-lg">Prenota</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="container text-center">
+    <p>&copy; 2025 GerryTheBarber. Tutti i diritti riservati.</p>
+    <div class="social-icons">
+      <!-- Icona Instagram -->
+      <a href="https://www.instagram.com/kekkocaia_20" target="_blank" class="text-white">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <!-- Icona Email -->
+      <a href="mailto:frank.caianiello@gmail.com" target="_blank" class="text-white">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <!-- Icona GitHub -->
+      <a href="https://github.com/kekkocaia20" target="_blank" class="text-white">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

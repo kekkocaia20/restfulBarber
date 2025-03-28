@@ -1,0 +1,71 @@
+ body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/img/background.jpg'); /* Imposta l'immagine di sfondo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #272624, #3a2c2a);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+
+        .highlight {
+            color: #ffeb3b;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .back-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

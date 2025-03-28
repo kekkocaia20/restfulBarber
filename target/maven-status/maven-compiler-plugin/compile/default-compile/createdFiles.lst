@@ -1,0 +1,5 @@
+springPJrestfuls\restfulBarber\model\Utente.class
+springPJrestfuls\restfulBarber\config\MvcConfigurer.class
+springPJrestfuls\restfulBarber\RestfulBarberApplication.class
+springPJrestfuls\restfulBarber\controller\GestoreConnesioni.class
+springPJrestfuls\restfulBarber\repository\IRepoPrenotazione.class

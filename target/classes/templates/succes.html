@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style3.css">
+    <title>Prenotazione Confermata</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Prenotazione Confermata!</h1>
+        <p>Ciao, <strong th:text="${nome}"></strong> <strong th:text="${cognome}"></strong></p>
+        <p>Hai prenotato per il giorno <strong th:text="${dataPrenotazione}"></strong> alle <strong th:text="${orarioPrenotazione}"></strong>.</p>
+        <p><strong>SALVA LO SCREEN PER RICORDARTELO!</strong></p>
+        <div class="button-container">
+            <a href="/index" class="back-button">Torna alla Home</a>
+        </div>
+    </div>
+</body>
+</html>

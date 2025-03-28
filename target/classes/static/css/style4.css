@@ -1,0 +1,86 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #dee2e6;
+    min-width: 900px; /* Allarga la tabella */
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+}
+
+th {
+    white-space: nowrap; /* Impedisce l'andata a capo nelle intestazioni */
+    min-width: 160px; /* Evita il ritorno a capo */
+}
+
+th, td {
+    text-align: center;
+    border: 1px solid #dee2e6;
+    white-space: nowrap;
+    min-width: 150px; /* Aumenta la larghezza minima */
+    padding: 10px 15px; /* Aumenta il padding per migliorare la leggibilità */
+    overflow: visible; /* Evita che il testo venga troncato */
+    text-overflow: clip; /* Evita i puntini di overflow */
+}
+
+td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table {
+        width: max-content;
+        min-width: 900px; /* Mantiene la larghezza anche su mobile */
+    }
+
+    th, td {
+        font-size: 14px;
+        min-width: 130px; /* Aumenta ancora la larghezza minima */
+    }
+}
+
+
+.btn-danger {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.btn-primary {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+}
+
+input[type="date"] {
+    max-width: 200px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+        
