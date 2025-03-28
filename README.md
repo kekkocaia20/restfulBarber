@@ -6,11 +6,21 @@ Il sistema garantisce una gestione efficiente delle prenotazioni, permettendo ai
 Per la realizzazione del sito, sono stati utilizzati i seguenti strumenti:
 
 -Spring Boot per il framework back-end ⚙️
+
 -Thymeleaf per la gestione delle viste lato client 🖥️
+
 -PostgreSQL come database per la gestione delle prenotazioni 💾
+
 -Spring Data JPA per l'interazione con il database 🔗
+
 -HTML/CSS per il design e la struttura della pagina 🌐
+
 -Docker per la gestione del container e l'ambiente di sviluppo 🐳
+
 -Maven per la gestione delle dipendenze e la build del progetto 🔧
+
+-Render per il collegamento di GitHub e il deploy del progetto 🚀
+
+-Neon per il database hosting su Render 🔒
 
 Tutto è stato progettato per offrire una soluzione pratica e funzionale per i clienti della barberia.
